@@ -1,18 +1,15 @@
-# 1. Use Node base image
-FROM node::current
-
-# 2. Set working directory
+# Stage 1: Build React App
+FROM node:20-alpine AS builder
 WORKDIR /app
-
-# 3. Install dependencies
 COPY package*.json ./
 RUN npm install
-
-# 4. Copy project files
 COPY . .
+RUN npm run build
 
-# 5. Expose development port
+# Stage 2: Serve with static server
+FROM node:20-alpine
+WORKDIR /app
+RUN npm install -g serve
+COPY --from=builder /app/build ./build
 EXPOSE 3000
-
-# 6. Start the app
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build", "-l", "3000"]
