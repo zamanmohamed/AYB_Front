@@ -1,0 +1,137 @@
+.transaction-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Responsive title */
+  .title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Filters - Stack on mobile */
+  .filters-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Stack filter controls in mobile */
+  @media (max-width: 768px) {
+    .filters-container {
+      flex-direction: column;
+    }
+  }
+  
+  /* Filter button */
+  .filter-button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    display: block;
+    margin: auto;
+  }
+  
+  /* Custom Table Styling */
+  .custom-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-table th {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .custom-table td {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Responsive table - make it scrollable on small screens */
+  @media (max-width: 768px) {
+    .custom-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+  
+  /* Highlight credit and debit */
+  .credit {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .debit {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Actions buttons */
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  /* Make action buttons smaller in mobile */
+  @media (max-width: 768px) {
+    .actions {
+      flex-direction: column;
+    }
+  }
+  
+  /* Edit Button */
+  .edit-btn {
+    background: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    transition: 0.3s;
+  }
+  
+  .edit-btn:hover {
+    background: #007bff;
+    color: white;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+    transition: 0.3s;
+  }
+  
+  .delete-btn:hover {
+    background: red;
+    color: white;
+  }
+  
+  /* Pagination - Center in mobile */
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Reduce font size of pagination in mobile */
+  @media (max-width: 768px) {
+    .custom-pagination {
+      font-size: 14px;
+    }
+  }
+  
